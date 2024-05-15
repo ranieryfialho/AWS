@@ -3,7 +3,8 @@ import pandas as pd
 
 def main():
     st.title("Primeira Versão")
-    df = carregarDados()
+    df = carregarDados()  # Carrega os dados e exibe a tabela
+    st.subheader('Tabela de Dados')
     st.write(df)  # Exibe a tabela
     st.subheader('Gráfico de Salário por Funcionários')
     st.bar_chart(df.set_index('Nome')['Salário'])  # Exibe o gráfico
